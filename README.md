@@ -12,12 +12,12 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: cargo test
+    name: crabgo test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: rinse-repeat/crab-toolchain@main
         with:
           toolchain: stable
-      - run: cargo test --all-features
+      - run: crabgo test --all-features
 ```
